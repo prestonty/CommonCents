@@ -11,22 +11,7 @@ export default function LogNavbar() {
 
             <ul class="nav-links">
                 <li>
-                    <div></div>
-                </li>
-                <li>
-                    <a class="nav-text" href="#Benefits">
-                        Benefits
-                    </a>
-                </li>
-                <li>
-                    <a class="nav-text" href="#Services">
-                        Services
-                    </a>
-                </li>
-                <li>
-                    <a class="nav-text" href="#Aboutu=Us">
-                        About Us
-                    </a>
+                    <Progress />
                 </li>
             </ul>
             <LightButton text={"Login"}></LightButton>

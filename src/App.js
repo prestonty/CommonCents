@@ -24,20 +24,33 @@ import "./App.css";
 
 import Navbar from "./components/navbar.js";
 import Landing from "./pages/landing.js";
-import Dropbox from "./components/dropbox.js";
+import LogNavbar from "./components/logNavbar.js";
+import Interface from "./pages/interface.js";
 
 function App() {
-    return (
-        <div className="App">
-            <header>
-                <Navbar />
-            </header>
-            <Landing />
-            {/* <h1>
-                <SignIn auth={auth} />
-            </h1> */}
-        </div>
-    );
+    var page = 2;
+    if (page == 1) {
+        return (
+            <div className="App">
+                <header>
+                    <Navbar />
+                </header>
+                <Landing />
+                {/* <h1>
+                    <SignIn auth={auth} />
+                </h1> */}
+            </div>
+        );
+    } else if (page == 2) {
+        return (
+            <div className="App">
+                <header>
+                    <LogNavbar />
+                </header>
+                <Interface />
+            </div>
+        );
+    }
 }
 
 export default App;
