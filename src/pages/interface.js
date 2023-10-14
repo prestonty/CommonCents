@@ -2,12 +2,13 @@ import "../components/styles/interface.css";
 import LogNavbar from "../components/logNavbar.js";
 import SideNavButton from "../components/sideNavButton.js";
 import BarGraph from "../components/barGraph.js";
+import PieGraph from "../components/pieGraph.js";
 
 export default function Interface() {
     return (
         <div>
             <div>
-                <div class="sideNav">
+                <div class="sideNav grid-vertical">
                     <div class="topSideNav">
                         <SideNavButton
                             logoPath={
@@ -112,8 +113,12 @@ export default function Interface() {
                 </div>
                 <div class="main-content">
                     <BarGraph title={"Overall Spending"} />
+
+                    <PieGraph title={"October's Expenses"} />
                 </div>
-                <p>main frame</p>
+                <div class="bank-account-sidebar">
+                    <h2 class="sub-title">Linked Accounts</h2>
+                </div>
             </div>
         </div>
     );
