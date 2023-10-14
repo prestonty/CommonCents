@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
-import SignIn from "./config/firebase.js";
+// import SignIn from "./config/firebase.js";
 import "./App.css";
-import SignIn from "./pages/home.js";
+// import SignIn from "./pages/home.js";
 
 // import { initializeApp } from "firebase/app";
 // import "firebase/app";
