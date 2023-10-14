@@ -110,7 +110,9 @@ export default function Interface() {
                         ></SideNavButton>
                     </div>
                 </div>
-                <div class="main-content"></div>
+                <div class="main-content">
+                    <BarGraph title={"Overall Spending"} />
+                </div>
                 <p>main frame</p>
             </div>
         </div>
