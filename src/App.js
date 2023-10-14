@@ -3,11 +3,13 @@ import SignIn from './config/firebase.js'
 import "./App.css";
 
 function App() {
-    return (<div className="App">
+    return (
+      <div className="App">
             <h1>
                 <SignIn/>
             </h1>
-        </div>);
+            <Dropbox />
+    </div>);
 }
 
 export default App;
