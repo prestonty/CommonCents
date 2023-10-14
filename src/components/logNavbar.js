@@ -1,7 +1,8 @@
-import "./styles/navbar.css";
+import "./styles/logNavbar.css";
 import LightButton from "../components/lightButton.js";
+import Progress from "../components/progress.js";
 
-export default function Navbar() {
+export default function LogNavbar() {
     return (
         <nav>
             <a class="Home" href="#Top">
@@ -10,9 +11,7 @@ export default function Navbar() {
 
             <ul class="nav-links">
                 <li>
-                    <a class="nav-text" href="#Explore">
-                        Explore
-                    </a>
+                    <div></div>
                 </li>
                 <li>
                     <a class="nav-text" href="#Benefits">

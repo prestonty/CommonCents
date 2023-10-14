@@ -1,0 +1,38 @@
+.Landing {
+ /* width: auto; */
+}
+
+div.bold {
+    font-weight: bold;
+    display: inline;
+}
+
+div.green {
+    color: var(--Rainforest-Green, #00715B);
+
+}
+
+.main {
+    color: var(--Black-Bean, #4C4948);
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.description {
+    color: var(--Black-Bean, #4C4948);
+    font-size: 2.29181rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.frameWrap {
+    text-align: center;
+}
+
+.content {
+    display: inline-block;
+    text-align: left;
+}

@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* gotta add this so the top of the screen is also a dark background colour */
+  background: var(--White-Smoke, #F5F5F5);
 }
 
 code {
