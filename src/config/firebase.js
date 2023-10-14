@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { GoogleAuthProvider, signInWithPopup, getAuth } from 'firebase/auth';
+import { getFirestore } from "firebase/firestore"; 
 
-initializeApp({
+const app = initializeApp({
     apiKey: "AIzaSyDOPvE_BKy77pMtcUpBu3y7IVkiNUSSieY",
     authDomain: "commoncents-6bf69.firebaseapp.com",
     projectId: "commoncents-6bf69",
@@ -50,3 +51,4 @@ function SignIn() {
 }
 
 export default SignIn;
+export const db = getFirestore(app);

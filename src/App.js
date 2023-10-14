@@ -25,14 +25,12 @@ import "./App.css";
 import Navbar from "./components/navbar.js";
 import Landing from "./pages/landing.js";
 import Dropbox from "./components/dropbox.js";
+import FirebaseData from "./components/firebaseData.js";
 
 function App() {
     return (
         <div className="App">
-            <header>
-                <Navbar />
-            </header>
-            <Landing />
+                <FirebaseData />
             {/* <h1>
                 <SignIn auth={auth} />
             </h1> */}
