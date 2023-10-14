@@ -1,6 +1,10 @@
 import "../components/styles/landing.css";
 import DarkButton from "../components/darkButton.js";
 
+// This page is almost done in terms of appearance
+// need to put images of laptop, computer, iphone (look at figma to see images are missing)
+// also the buttons do not work (dark button on Get Started) and the light button in the navBar.js
+
 export default function Landing() {
     return (
         <div class="Landing">
@@ -18,7 +22,7 @@ export default function Landing() {
                             anywhere, anytime.
                         </p>
                     </div>
-                    <DarkButton>Get Started</DarkButton>
+                    <DarkButton text="Get Started"></DarkButton>
                 </div>
             </div>
         </div>

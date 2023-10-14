@@ -1,3 +1,6 @@
+/* This is the css for the App. Since its the parent of all our components, touching this will affect ALL child components
+i dont advise touching it unless u want all the font to be a specific family or if u want all the buttons to be the same colour */
+
 .App {
   text-align: center;
   width: auto;
