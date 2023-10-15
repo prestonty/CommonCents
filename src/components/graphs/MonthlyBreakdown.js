@@ -3,7 +3,7 @@ import { Pie, PieChart, ResponsiveContainer, Cell, Tooltip, Legend } from 'recha
 
 const MonthlyBreakdown = (props) => {
     return (
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer className="pieChartWrapper" width="100%" height="100%">
             <PieChart width={400} height={400}>
                 <Tooltip />
                 <Legend layout="vertical" verticalAlign="middle" align="right" />
