@@ -1,17 +1,18 @@
-.intSideNavMenuUnP{
+.intSideNavMenuP{
     display: flex;
+    width: 15.25rem;
     padding: 1rem 2.5625rem;
-    justify-content: center;
     align-items: center;
     gap: 1rem;
 
     border-radius: 0rem 1rem 1rem 0rem;
+    background: var(--Rainforest-Green, #00715B);
 }
 
-.iconUnP{
+.iconP{
     width: 1.67569rem;
     height: 1.67569rem;
+    flex-shrink: 0;
 
-    fill: var(--Black-Bean, #4C4948);
+    fill: var(--White-Smoke, #F5F5F5);
 }
-

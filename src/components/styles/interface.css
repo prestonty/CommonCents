@@ -15,6 +15,34 @@ div.topSideNav {
 
 }
 
+.intTopNav{
+    position: fixed;
+
+    display: flex;
+    width: fill;
+    height: 8.4375rem;
+    padding: 0rem 3.125rem;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 2px solid #C5C5C5;
+    background: var(--White-Smoke, #F5F5F5);
+}
+
+.intSideNav{
+    position: fixed;
+    
+    display: flex;
+    height: fill;
+    width: 19.25rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    border-right: 2px solid #C5C5C5;
+    background: var(--White-Smoke, #F5F5F5);
+}
+
 div.barGraph {
     display: flex;
     width: 62rem;
@@ -57,3 +85,4 @@ div.pieGraph {
 .grid-vertical {
     display: block;
     float:left;
+}
