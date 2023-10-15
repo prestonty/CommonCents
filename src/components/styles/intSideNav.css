@@ -23,9 +23,11 @@ li {
     box-sizing: border-box;
 }
 
+
 li .logo{
     /* color: aliceblue; you need 2 seperate logos */
     width: auto;
+    fill: var(--Black-Bean,#4C4948);
 }
 
 a {
@@ -65,5 +67,5 @@ a {
     gap: 1rem;
 
     border-radius: 0rem 1rem 1rem 0rem;
-    background: var(--Rainforest-Green, #00715B);
+    background: var(--White-Smoke, #F5F5F5);
 }

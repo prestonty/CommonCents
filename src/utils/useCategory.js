@@ -1,6 +1,9 @@
-import useFetch from './useFetch'
+import useFetch from './useFetch';
+import { useState } from 'react';
 
 const useCategory = (item) => {
+  const [category, setcategory] = useState("bad_input");
+
     const options = {
       method: 'POST',
       headers: {
@@ -19,10 +22,14 @@ const useCategory = (item) => {
     };
 
     const url = 'https://api.cohere.ai/v1/generate'
-
     const {data, isLoading, hasError, errorMessage} = useFetch(url, options)
+    
+    const getcategory = () => {
+      setcategory(data.generations[0].text);
+    };
 
-    return data ? data.generations[0].text : 'bad'
+    // return data ? data.generations[0].text : 'bad'
+    return [category , getcategory]; 
 }
 
 export default useCategory
