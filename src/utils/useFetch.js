@@ -8,9 +8,11 @@ const useFetch = (url, options) => {
     const [isLoading, setIsLoading] = useState(false)
     const [hasError, setHasError] = useState(false)
     const [errorMessage, setErrorMessage] = useState('')
+    const [thisOptions, setOptions] = useState(options); 
 
     //preform the api call
     useEffect(() => {
+        console.log("fetching...")
         const fetchData = async () => {
             setIsLoading(true)
             try {
@@ -20,19 +22,29 @@ const useFetch = (url, options) => {
                     setData(result)
                 } else{
                     setHasError(true)
+                    setData("Sample Category")
                     setErrorMessage(result)
                 }
                 setIsLoading(false)
             } catch (err) {
+                console.log(err)
                 setHasError(true)
                 setErrorMessage(err.message)
                 setIsLoading(false)
             }
         }
         fetchData()
-    }, [])
+    }, [thisOptions])
 
-    return { data, isLoading, hasError, errorMessage }
+    const updateOptions = (options) => {
+        try{
+            setOptions(options)
+        }catch(e){
+            console.log(e)
+        }
+    }
+
+    return { data, isLoading, hasError, errorMessage, updateOptions}
 }
 
 export default useFetch 

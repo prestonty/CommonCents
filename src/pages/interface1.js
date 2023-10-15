@@ -8,6 +8,7 @@ import ProfileHUD from "../components/profileHUD.js";
 import IntSideNav from "../components/intSideNav.js";
 import SemiAnnualSpending from '../components/graphs/SemiAnnualSpending.js';
 import MonthlyBreakdown from "../components/graphs/MonthlyBreakdown.js";
+import ExpenseForm from "../components/userForm.js";  
 
 const data = [
     { name: "May", val: 5000, color: "#00715B" },
@@ -63,6 +64,9 @@ export default function Interface() {
                 <div className="pieGraph">
                   <MonthlyBreakdown data={dataPie} />
                 </div>
+            </div>
+            <div className="userForm">
+                <ExpenseForm />
             </div>
 
         </div>
