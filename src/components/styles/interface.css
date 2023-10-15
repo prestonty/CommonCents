@@ -1,3 +1,11 @@
+.dashBoard {
+    display:grid;
+    height: 100vh;
+    width: 100vw;
+    gap: 10px 10px;
+    grid-template-columns: [first] 19.25rem [line2] 25px [line3] auto [col3-start] 25% [line4] 40px [end];
+    grid-template-rows: [row1-start] 8.4375rem [row1-end] auto [third-line] 40px [last-line];
+}
 div.sideNav {
     /* text-align: left; */
     /* display: flex; */
@@ -15,38 +23,47 @@ div.topSideNav {
 
 }
 
-.intTopNav{
-    position: fixed;
 
+.intTopNav{
     display: flex;
-    width: fill;
+    box-sizing: border-box;  
+    width: 100%;
     height: 8.4375rem;
     padding: 0rem 3.125rem;
     justify-content: space-between;
     align-items: center;
-
+    grid-column: 1 / span end;
+    grid-row: 1 / span row1-end;
+    background-color: rgb(110, 111, 175);
     border-bottom: 2px solid #C5C5C5;
-    background: var(--White-Smoke, #F5F5F5);
+    /* background: var(--White-Smoke, #F5F5F5); */
 }
 
 .intSideNav{
-    position: fixed;
     
-    display: flex;
     height: fill;
     width: 19.25rem;
+    grid-column: 1 / span line2;
+    grid-row: 2 / span last-line;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-
+    background-color:rgb(142, 210, 188);
     border-right: 2px solid #C5C5C5;
-    background: var(--White-Smoke, #F5F5F5);
+    /* background: var(--White-Smoke, #F5F5F5); */
 }
 
-div.barGraph {
+div.chart {
     display: flex;
-    width: 62rem;
-    height: 27.125rem;
+    flex-direction: column;
+    background-color: #4C4948;
+    grid-column-start: 3;
+    grid-column-end: span col3-start;
+    grid-row-start: 2;
+    grid-row-end: span third-line;
+    /* display: flex;
+     width: 62rem;
+    height: 10px; 
     padding: 3.125rem;
     flex-direction: column;
     align-items: flex-start;
@@ -54,23 +71,19 @@ div.barGraph {
     flex-shrink: 0;
 
     border-radius: 1rem;
-    border: 1px solid rgba(197, 197, 197, 0.01);
-    box-shadow: 0px 0px 16px 0px #000;
+    border: 10px solid rgba(197, 197, 197, 0.01);
+    box-shadow: 0px 0px 16px 0px #000; */
 }
 
-div.pieGraph {
-        display: flex;
-        width: 62rem;
-        height: 27.125rem;
-        padding: 3.125rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5625rem;
-        flex-shrink: 0;
-    
-        border-radius: 1rem;
-        border: 1px solid rgba(197, 197, 197, 0.01);
-        box-shadow: 0px 0px 16px 0px #000;
+.pieGraph {
+    position:top; 
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+.pieChartWrapper {
+    background-color: blue;
 }
 
 
@@ -84,5 +97,16 @@ div.pieGraph {
 
 .grid-vertical {
     display: block;
-    float:left;
+    float: left;
 }
+
+.barGraph{
+    position:top; 
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+/* .chart {
+
+} */

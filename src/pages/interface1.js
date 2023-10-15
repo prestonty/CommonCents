@@ -6,13 +6,34 @@ import Logo from "../components/logo.js";
 import IntTopNavStatus from "../components/intTopNavStatus.js";
 import ProfileHUD from "../components/profileHUD.js";
 import IntSideNav from "../components/intSideNav.js";
+import SemiAnnualSpending from '../components/graphs/SemiAnnualSpending.js';
+import MonthlyBreakdown from "../components/graphs/MonthlyBreakdown.js";
+
+const data = [
+    { name: "May", val: 5000, color: "#00715B" },
+    { name: "Jun", val: 5800, color: "#D9893A" },
+    { name: "Jul", val: 8100, color: "#D93A3A" },
+    { name: "Aug", val: 9600, color: "#D93A3A" },
+    { name: "Sep", val: 5400, color: "#D9893A" },
+    { name: "Oct", val: 3700, color: "#00715B" },
+]
+
+const dataPie = [
+    { name: "Shelter", val: 732.50, color: "#D27927" },
+    { name: "Transportation", val: 462.50, color: "#2F7EC8" },
+    { name: "Food", val: 372.50, color: "#2CD132" },
+    { name: "Education", val: 287.50, color: "#D23737" },
+    { name: "Recreation", val: 167.50, color: "#13D1AF" },
+    { name: "Health", val: 150.00, color: "#D25892" },
+    { name: "Miscellaneous", val: 328.25, color: "#4C4948" },
+  ]
 
 export default function Interface() {
 
     return (
-        <div>
-            <div className="intTopNav">
-                <Logo/>
+        <div class = "dashBoard">
+            <div class="intTopNav">
+                <Logo />
                 <IntTopNavStatus
                     logoPath={
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
@@ -29,12 +50,21 @@ export default function Interface() {
                     }
                     label={"Great job! You're spending less than usual. Have a cookie! 🍪 "}
                 ></IntTopNavStatus>
-                <ProfileHUD/>
+                <ProfileHUD />
+            </div>
+            
+            <div class="intSideNav">
+                <IntSideNav />
+            </div> 
+            <div className="chart">
+                <div className="barGraph">
+                    <SemiAnnualSpending data={data} />
+                </div>
+                <div className="pieGraph">
+                  <MonthlyBreakdown data={dataPie} />
+                </div>
             </div>
 
-            <div className="intSideNav">
-                <IntSideNav/>
-            </div>
         </div>
     );
 }

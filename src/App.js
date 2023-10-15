@@ -71,9 +71,6 @@ function App() {
                     <LogNavbar />
                 </header>
                 <Interface /> */}
-                <div className="pie">
-                  <MonthlyBreakdown data={data} />
-                </div>
             </div>
         );
     }
