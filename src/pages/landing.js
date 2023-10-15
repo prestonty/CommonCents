@@ -1,3 +1,4 @@
+import { signInWithGoogle } from "../config/firebase";
 import "../components/styles/landing.css";
 import DarkButton from "../components/darkButton.js";
 
@@ -22,7 +23,7 @@ export default function Landing() {
                             anywhere, anytime.
                         </p>
                     </div>
-                    <DarkButton text="Get Started"></DarkButton>
+                    <DarkButton onClick={signInWithGoogle} text="Get Started"></DarkButton>
                 </div>
             </div>
         </div>
