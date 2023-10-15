@@ -27,8 +27,18 @@ import Landing from "./pages/landing.js";
 import LogNavbar from "./components/logNavbar.js";
 import Interface from "./pages/interface1.js"; // change back to interface.js after - liz
 
+import {auth} from './config/firebase.js';
+
+import { useAuthState } from 'react-firebase-hooks/auth';
+
+var page = 1;
+
 function App() {
-    var page = 2;
+    const [user] = useAuthState(auth);
+
+    if(user){
+      page = 2;
+    }
     if (page == 1) {
         return (
             <div className="App">

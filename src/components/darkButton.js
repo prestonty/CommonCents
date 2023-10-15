@@ -5,7 +5,7 @@ import "../components/styles/darkButton.css";
 export default function DarkButton(props) {
     return (
         <div class="darkButton">
-            <button class="darkFilled">
+            <button onClick={props.onClick} class="darkFilled">
                 <div class="border2">{props.text}</div>
             </button>
         </div>

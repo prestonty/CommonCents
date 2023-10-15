@@ -1,3 +1,4 @@
+import { signInWithGoogle } from "../config/firebase";
 import "./styles/navbar.css";
 import LightButton from "../components/lightButton.js";
 
@@ -32,7 +33,7 @@ export default function Navbar() {
                 </li>
             </ul>
             {/* Need to add functionality to the login button */}
-            <LightButton text={"Login"}></LightButton>
+            <LightButton onClick={signInWithGoogle} text={"Login"}></LightButton>
         </nav>
     );
 }
