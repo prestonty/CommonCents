@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { GoogleAuthProvider, signInWithPopup, getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
-initializeApp({
+const app = initializeApp({
     apiKey: "AIzaSyDOPvE_BKy77pMtcUpBu3y7IVkiNUSSieY",
     authDomain: "commoncents-6bf69.firebaseapp.com",
     projectId: "commoncents-6bf69",
@@ -9,6 +10,8 @@ initializeApp({
     messagingSenderId: "775611183913",
     appId: "1:775611183913:web:0f866c1f1a1f4352483d38"
 })
+
+export const db = getFirestore(app);
 
 export const auth = getAuth();
 auth.languageCode = 'it';

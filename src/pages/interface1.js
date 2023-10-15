@@ -8,28 +8,17 @@ import ProfileHUD from "../components/profileHUD.js";
 import IntSideNav from "../components/intSideNav.js";
 import SemiAnnualSpending from '../components/graphs/SemiAnnualSpending.js';
 import MonthlyBreakdown from "../components/graphs/MonthlyBreakdown.js";
+import { MonthData } from "../utils/MonthData.js";
+import { CategoryData } from "../utils/CategoryData";
 
-const data = [
-    { name: "May", val: 5000, color: "#00715B" },
-    { name: "Jun", val: 5800, color: "#D9893A" },
-    { name: "Jul", val: 8100, color: "#D93A3A" },
-    { name: "Aug", val: 9600, color: "#D93A3A" },
-    { name: "Sep", val: 5400, color: "#D9893A" },
-    { name: "Oct", val: 3700, color: "#00715B" },
-]
+var data = MonthData()
 
-const dataPie = [
-    { name: "Shelter", val: 732.50, color: "#D27927" },
-    { name: "Transportation", val: 462.50, color: "#2F7EC8" },
-    { name: "Food", val: 372.50, color: "#2CD132" },
-    { name: "Education", val: 287.50, color: "#D23737" },
-    { name: "Recreation", val: 167.50, color: "#13D1AF" },
-    { name: "Health", val: 150.00, color: "#D25892" },
-    { name: "Miscellaneous", val: 328.25, color: "#4C4948" },
-  ]
+var dataPie = CategoryData("Oct")
 
-export default function Interface() {
+var first = true;
 
+export default function Interface() {   
+    
     return (
         <div class = "dashBoard">
             <div class="intTopNav">

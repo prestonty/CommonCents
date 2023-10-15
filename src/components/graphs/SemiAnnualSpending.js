@@ -13,7 +13,7 @@ const ColouredBar = (props) => {
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
 
-const SemiAnnualSpending = (props) => {
+var SemiAnnualSpending = (props) => {
     return (
         <ResponsiveContainer>
             <BarChart data={props.data} barCategoryGap={'30%'} strokeDasharray="4">
@@ -26,6 +26,7 @@ const SemiAnnualSpending = (props) => {
                         <Cell key={`cell-${index}`} fill={props.data[index].color} />
                     ))}
                 </ Bar>
+                {console.log(props.data)}
             </BarChart>
         </ResponsiveContainer>
     )
