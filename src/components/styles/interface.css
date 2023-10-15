@@ -1,3 +1,9 @@
+.dashBoard {
+    display:grid;
+    gap: 50px 100px;
+    grid-template-columns: [first] 19.25rem [line2] auto [col3-start] 40px [end];
+    grid-template-rows: [row1-start] 25% [row1-end] auto [third-line] 40px [last-line];
+}
 div.sideNav {
     /* text-align: left; */
     /* display: flex; */
@@ -15,38 +21,42 @@ div.topSideNav {
 
 }
 
+
 .intTopNav{
     position: fixed;
-
     display: flex;
-    width: fill;
+    width: 100%;
     height: 8.4375rem;
     padding: 0rem 3.125rem;
     justify-content: space-between;
     align-items: center;
 
+    background-color: rgb(110, 111, 175);
     border-bottom: 2px solid #C5C5C5;
-    background: var(--White-Smoke, #F5F5F5);
+    /* background: var(--White-Smoke, #F5F5F5); */
 }
 
 .intSideNav{
     position: fixed;
-    
-    display: flex;
     height: fill;
     width: 19.25rem;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-
+    background-color:rgb(142, 210, 188);
     border-right: 2px solid #C5C5C5;
-    background: var(--White-Smoke, #F5F5F5);
+    /* background: var(--White-Smoke, #F5F5F5); */
 }
 
-div.barGraph {
-    display: flex;
-    width: 62rem;
-    height: 27.125rem;
+div.chart {
+    background-color: #4C4948;
+    grid-column-start: 2;
+    grid-column-end: span col3-start;
+    grid-row-start: 2;
+    grid-row-end: span third-line;
+    /* display: flex;
+     width: 62rem;
+    height: 10px; 
     padding: 3.125rem;
     flex-direction: column;
     align-items: flex-start;
@@ -54,8 +64,8 @@ div.barGraph {
     flex-shrink: 0;
 
     border-radius: 1rem;
-    border: 1px solid rgba(197, 197, 197, 0.01);
-    box-shadow: 0px 0px 16px 0px #000;
+    border: 10px solid rgba(197, 197, 197, 0.01);
+    box-shadow: 0px 0px 16px 0px #000; */
 }
 
 div.pieGraph {
@@ -84,5 +94,16 @@ div.pieGraph {
 
 .grid-vertical {
     display: block;
-    float:left;
+    float: left;
 }
+
+.barGraph{
+    position:top; 
+    display: flex;
+    width: 100%;
+    height: 100%; 
+}
+
+/* .chart {
+
+} */
