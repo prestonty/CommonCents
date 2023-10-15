@@ -1,3 +1,4 @@
+import { signInWithGoogle } from "../config/firebase";
 import "./styles/navbar.css";
 import LightButton from "../components/lightButton.js";
 
@@ -5,34 +6,34 @@ import LightButton from "../components/lightButton.js";
 export default function Navbar() {
     return (
         <nav>
-            <a class="Home" href="#Top">
+            <a className="Home" href="#Top">
                 commoncents
             </a>
 
-            <ul class="nav-links">
+            <ul className="nav-links">
                 <li>
-                    <a class="nav-text" href="#Explore">
+                    <a className="nav-text" href="#Explore">
                         Explore
                     </a>
                 </li>
                 <li>
-                    <a class="nav-text" href="#Benefits">
+                    <a className="nav-text" href="#Benefits">
                         Benefits
                     </a>
                 </li>
                 <li>
-                    <a class="nav-text" href="#Services">
+                    <a className="nav-text" href="#Services">
                         Services
                     </a>
                 </li>
                 <li>
-                    <a class="nav-text" href="#Aboutu=Us">
+                    <a className="nav-text" href="#Aboutu=Us">
                         About Us
                     </a>
                 </li>
             </ul>
             {/* Need to add functionality to the login button */}
-            <LightButton text={"Login"}></LightButton>
+            <LightButton onClick={signInWithGoogle} text={"Login"}></LightButton>
         </nav>
     );
 }

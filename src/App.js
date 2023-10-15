@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 // import SignIn from "./config/firebase.js";
 import "./App.css";
+import "./components/styles/chart.css"
 // import SignIn from "./pages/home.js";
 
 // import { initializeApp } from "firebase/app";
@@ -26,9 +27,30 @@ import Navbar from "./components/navbar.js";
 import Landing from "./pages/landing.js";
 import LogNavbar from "./components/logNavbar.js";
 import Interface from "./pages/interface1.js"; // change back to interface.js after - liz
+import MonthlyBreakdown from "./components/graphs/MonthlyBreakdown.js";
+
+import {auth} from './config/firebase.js';
+
+import { useAuthState } from 'react-firebase-hooks/auth';
+
+var page = 1;
 
 function App() {
-    var page = 2;
+    const [user] = useAuthState(auth);
+
+    const data = [
+      { name: "Shelter", val: 732.50, color: "#D27927" },
+      { name: "Transportation", val: 462.50, color: "#2F7EC8" },
+      { name: "Food", val: 372.50, color: "#2CD132" },
+      { name: "Education", val: 287.50, color: "#D23737" },
+      { name: "Recreation", val: 167.50, color: "#13D1AF" },
+      { name: "Health", val: 150.00, color: "#D25892" },
+      { name: "Miscellaneous", val: 328.25, color: "#4C4948" },
+    ]
+
+    if(user){
+      page = 2;
+    }
     if (page == 1) {
         return (
             <div className="App">
@@ -49,6 +71,9 @@ function App() {
                     <LogNavbar />
                 </header>
                 <Interface /> */}
+                <div className="pie">
+                  <MonthlyBreakdown data={data} />
+                </div>
             </div>
         );
     }

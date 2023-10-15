@@ -16,3 +16,21 @@
 
     fill: var(--White-Smoke, #F5F5F5);
 }
+
+.intSideNavMenuUnP{
+    display: flex;
+    padding: 1rem 2.5625rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    border-radius: 0rem 1rem 1rem 0rem;
+}
+
+.iconUnP{
+    width: 1.67569rem;
+    height: 1.67569rem;
+
+    fill: var(--Black-Bean, #4C4948);
+}
+

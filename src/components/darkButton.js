@@ -4,9 +4,9 @@ import "../components/styles/darkButton.css";
 // creates a dark button and inside the button has text (in props.description)
 export default function DarkButton(props) {
     return (
-        <div class="darkButton">
-            <button class="darkFilled">
-                <div class="border2">{props.text}</div>
+        <div className="darkButton">
+            <button onClick={props.onClick} className="darkFilled">
+                <div className="border2">{props.text}</div>
             </button>
         </div>
     );

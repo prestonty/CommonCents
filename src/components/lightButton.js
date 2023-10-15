@@ -3,11 +3,11 @@ import "../components/styles/lightButton.css";
 // creates a white button with dark green border & text. props.text is text inside the button (I used it in the landing page for the login button)
 export default function LightButton(props) {
     return (
-        <div class="lightButton">
-            <a class="login">
+        <div className="lightButton">
+            <a className="login">
                 {/* Need to add functionality to the button. What does it do after you click it? Well its used to login so make it take u to Google to sign in with google account. (I think evan knows how to do this).*/}
-                <button class="lightFilled">
-                    <div class="border1">{props.text}</div>
+                <button onClick={props.onClick} className="lightFilled">
+                    <div className="border1">{props.text}</div>
                 </button>
             </a>
         </div>
