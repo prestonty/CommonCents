@@ -1,0 +1,71 @@
+.profileHUD{
+    display: flex;
+    align-items: flex-start;
+    gap: 0.78125rem;
+}
+.profileCalendar{
+    display: flex;
+    height: 4.625rem;
+    padding: 0rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+
+    border-radius: 1rem;
+    background: #E0E0E0;
+}
+
+.calendarIcon{
+    width: 1.67313rem;
+    height: 1.67313rem;
+    fill: var(--Black-Bean, #4C4948);
+}
+
+.profileNotif{
+    display: flex;
+    width: 4.625rem;
+    height: 4.625rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+
+    border-radius: 1rem;
+    background: #E0E0E0;
+}
+
+.notifIcon{
+    width: 1.67313rem;
+    height: 1.67563rem;
+    flex-shrink: 0;
+
+    stroke-width: 0.5px;
+    fill: var(--Black-Bean, #4C4948);
+}
+
+.profileCard{
+    display: flex;
+    padding: 0.75rem 1.6875rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+
+    border-radius: 1rem;
+    background: #E0E0E0;
+}
+
+.profileIcon{
+    width: 3.125rem;
+    height: 3.125rem;
+
+    stroke-width: 0.5px;
+    stroke: var(--Black-Bean, #4C4948);
+}
+
+.profileCardText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.375rem;
+}
+
