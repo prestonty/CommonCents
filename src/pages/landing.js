@@ -8,16 +8,16 @@ import DarkButton from "../components/darkButton.js";
 
 export default function Landing() {
     return (
-        <div class="Landing">
-            <div class="frameWrap">
-                <div class="content">
-                    <h1 class="main">
-                        Make budgeting <div class="bold">easy.</div>
+        <div className="Landing">
+            <div className="frameWrap">
+                <div className="content">
+                    <h1 className="main">
+                        Make budgeting <div className="bold">easy.</div>
                         <br /> Make it{" "}
-                        <div class="bold green">commoncents.</div>
+                        <div className="bold green">commoncents.</div>
                     </h1>
                     <div>
-                        <p class="description">
+                        <p className="description">
                             Manage and monitor your spending
                             <br />
                             anywhere, anytime.

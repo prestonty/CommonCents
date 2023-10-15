@@ -8,9 +8,10 @@ import ProfileHUD from "../components/profileHUD.js";
 import IntSideNav from "../components/intSideNav.js";
 
 export default function Interface() {
+
     return (
         <div>
-            <div class="intTopNav">
+            <div className="intTopNav">
                 <Logo/>
                 <IntTopNavStatus
                     logoPath={
@@ -23,7 +24,7 @@ export default function Interface() {
                 <ProfileHUD/>
             </div>
 
-            <div class="intSideNav">
+            <div className="intSideNav">
                 <IntSideNav/>
             </div>
         </div>
