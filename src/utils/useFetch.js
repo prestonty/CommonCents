@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react'
 
+//easier way to make api call
 const useFetch = (url, options) => {
+
+    //setters for return variables
     const [data, setData] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
     const [hasError, setHasError] = useState(false)
     const [errorMessage, setErrorMessage] = useState('')
 
+    //preform the api call
     useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true)
