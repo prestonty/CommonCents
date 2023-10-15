@@ -2,9 +2,12 @@ export default function Progress() {
     let average = 7000;
     let spending = 200;
     // placeholder values
+    // basically by default i want the user's spending to be lower than average (u can change the values above to print out either if statements)
+    // when user spends more than average, tell them they spend too much (no cookie emoji), then spend under, give them cookie emoji
     if (spending < average) {
         return (
             <div>
+                {/* ignore this long svg file, just know that it draws a fancy logo made in figma (i copied and pasted the svg image from there) */}
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="49"

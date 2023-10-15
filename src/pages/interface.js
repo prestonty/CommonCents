@@ -2,12 +2,18 @@ import "../components/styles/interface.css";
 import LogNavbar from "../components/logNavbar.js";
 import SideNavButton from "../components/sideNavButton.js";
 import BarGraph from "../components/barGraph.js";
+import PieGraph from "../components/pieGraph.js";
+
+// This is one of the big main pages. In figma its labelled Interface so this is that page.
 
 export default function Interface() {
     return (
         <div>
             <div>
-                <div class="sideNav">
+                {/* I tried to make a div class called grid-vertical to print the sidenavbuttons in a column (It worked) */}
+                <div class="sideNav grid-vertical">
+                    {/* I noticed in figma that the dashboard, trends, and breakdown was grouped together at the top while settings and log out was grouped together at the bottom of the page. I tried making a div tag called topsidenav but I couldn't separate them from Settings & log out (Look at figma to see what im talking about)) This needs to be worked on (Or u can ignore it, its just a smalld detail i couldnt bring over)) */}
+                    {/* below are the 5 buttons on the sidenav */}
                     <div class="topSideNav">
                         <SideNavButton
                             logoPath={
@@ -110,8 +116,16 @@ export default function Interface() {
                         ></SideNavButton>
                     </div>
                 </div>
-                <div class="main-content"></div>
-                <p>main frame</p>
+                {/* this is the main content (where the graphs will be) */}
+                <div class="main-content">
+                    <BarGraph title={"Overall Spending"} />
+
+                    <PieGraph title={"October's Expenses"} />
+                </div>
+                {/* this is where the credit card image and linked accounts will be (NOT DONE) */}
+                <div class="bank-account-sidebar">
+                    <h2 class="sub-title">Linked Accounts</h2>
+                </div>
             </div>
         </div>
     );
