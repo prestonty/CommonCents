@@ -25,7 +25,7 @@ import "./App.css";
 import Navbar from "./components/navbar.js";
 import Landing from "./pages/landing.js";
 import LogNavbar from "./components/logNavbar.js";
-import Interface from "./pages/interface.js";
+import Interface from "./pages/interface1.js"; // change back to interface.js after - liz
 
 function App() {
     var page = 2;
@@ -44,10 +44,11 @@ function App() {
     } else if (page == 2) {
         return (
             <div className="App">
-                <header>
+                <Interface/>
+                {/* <header>
                     <LogNavbar />
                 </header>
-                <Interface />
+                <Interface /> */}
             </div>
         );
     }
