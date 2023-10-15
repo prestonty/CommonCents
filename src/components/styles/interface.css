@@ -1,8 +1,10 @@
 .dashBoard {
     display:grid;
-    gap: 50px 100px;
-    grid-template-columns: [first] 19.25rem [line2] auto [col3-start] 40px [end];
-    grid-template-rows: [row1-start] 25% [row1-end] auto [third-line] 40px [last-line];
+    height: 100vh;
+    width: 100vw;
+    gap: 10px 10px;
+    grid-template-columns: [first] 19.25rem [line2] 25px [line3] auto [col3-start] 25% [line4] 40px [end];
+    grid-template-rows: [row1-start] 8.4375rem [row1-end] auto [third-line] 40px [last-line];
 }
 div.sideNav {
     /* text-align: left; */
@@ -23,23 +25,26 @@ div.topSideNav {
 
 
 .intTopNav{
-    position: fixed;
     display: flex;
+    box-sizing: border-box;  
     width: 100%;
     height: 8.4375rem;
     padding: 0rem 3.125rem;
     justify-content: space-between;
     align-items: center;
-
+    grid-column: 1 / span end;
+    grid-row: 1 / span row1-end;
     background-color: rgb(110, 111, 175);
     border-bottom: 2px solid #C5C5C5;
     /* background: var(--White-Smoke, #F5F5F5); */
 }
 
 .intSideNav{
-    position: fixed;
+    
     height: fill;
     width: 19.25rem;
+    grid-column: 1 / span line2;
+    grid-row: 2 / span last-line;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
@@ -50,7 +55,7 @@ div.topSideNav {
 
 div.chart {
     background-color: #4C4948;
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-column-end: span col3-start;
     grid-row-start: 2;
     grid-row-end: span third-line;
