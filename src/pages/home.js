@@ -1,20 +1,13 @@
-// import {signInWithPopup} from 'firebase/auth';
-// import 'firebase/app';
-// import firebase from 'firebase/app';
+import {signInWithGoogle} from '../config/firebase';
 
-// function SignIn(props) {
+function SignIn() {
+    return (
+        <>
+          <h1>
+            <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
+          </h1>
+        </>
+      )
+}
 
-//     const signInWithGoogle = () => {
-//       const provider = new firebase.auth.GoogleAuthProvider();
-//       signInWithPopup(provider);
-//     }
-
-//     return (
-//       <>
-//         <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
-//       </>
-//     )
-
-//   }
-
-//   export default SignIn;
+export default SignIn;
