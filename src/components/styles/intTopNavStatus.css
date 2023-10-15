@@ -8,7 +8,6 @@
 .statusIcon{
     width: 2.9375rem;
     height: 2.9375rem;
-    stroke-width: 2.424px;
     stroke: var(--Rainforest-Green, #00715B);
 }
 
