@@ -1,0 +1,27 @@
+
+div.border2 {
+    border-radius: 0rem 1rem 1rem 0rem;
+    background: var(--Rainforest-Green, #00715B);
+}
+
+button.sideNavButton {
+    width: 15.25rem;
+    padding: 1rem 2.5625rem;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+p.sideNav {
+    color: var(--White-Smoke, #F5F5F5);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

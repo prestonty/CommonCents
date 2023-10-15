@@ -1,23 +1,38 @@
+import "./styles/navbar.css";
+import LightButton from "../components/lightButton.js";
+
+// This navbar is for the Landing Page (the page that asks you to sign up or login)
 export default function Navbar() {
     return (
-        <div>
-            <ul>
+        <nav>
+            <a class="Home" href="#Top">
+                commoncents
+            </a>
+
+            <ul class="nav-links">
                 <li>
-                    <a>commoncents</a>
+                    <a class="nav-text" href="#Explore">
+                        Explore
+                    </a>
                 </li>
                 <li>
-                    <a>Explore</a>
+                    <a class="nav-text" href="#Benefits">
+                        Benefits
+                    </a>
                 </li>
                 <li>
-                    <a>Benefits</a>
+                    <a class="nav-text" href="#Services">
+                        Services
+                    </a>
                 </li>
                 <li>
-                    <a>Services</a>
-                </li>
-                <li>
-                    <a>About Us</a>
+                    <a class="nav-text" href="#Aboutu=Us">
+                        About Us
+                    </a>
                 </li>
             </ul>
-        </div>
+            {/* Need to add functionality to the login button */}
+            <LightButton text={"Login"}></LightButton>
+        </nav>
     );
 }
