@@ -1,6 +1,7 @@
 import "./styles/navbar.css";
 import LightButton from "../components/lightButton.js";
 
+// This navbar is for the Landing Page (the page that asks you to sign up or login)
 export default function Navbar() {
     return (
         <nav>
@@ -30,6 +31,7 @@ export default function Navbar() {
                     </a>
                 </li>
             </ul>
+            {/* Need to add functionality to the login button */}
             <LightButton text={"Login"}></LightButton>
         </nav>
     );
